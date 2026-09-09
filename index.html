@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="tr">
 <head>
@@ -13,8 +12,8 @@
       padding: 0;
     }
     body {
-      font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-      background: radial-gradient(circle at center, #3a0ca3 0%, #0f051d 100%);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: #0d021a;
       color: #fff;
       min-height: 100vh;
       display: flex;
@@ -25,133 +24,101 @@
       position: relative;
     }
 
-    /* Arka Planda Yüzen Kalpler */
+    /* Arka Plan Yüzen Kalp & Işık Efektleri */
     .bg-heart {
       position: absolute;
-      color: rgba(255, 75, 110, 0.3);
-      font-size: 20px;
-      animation: floatUp 6s linear infinite;
-      bottom: -100px;
+      color: rgba(255, 105, 180, 0.25);
+      animation: floatUp 7s linear infinite;
+      bottom: -80px;
       z-index: 1;
+      pointer-events: none;
     }
     @keyframes floatUp {
-      0% { transform: translateY(0) scale(0.8) rotate(0deg); opacity: 1; }
-      100% { transform: translateY(-110vh) scale(1.3) rotate(360deg); opacity: 0; }
+      0% { transform: translateY(0) scale(0.8); opacity: 0.8; }
+      100% { transform: translateY(-110vh) scale(1.4); opacity: 0; }
     }
 
+    /* Sade ve Şık Kart */
     .card {
-      background: rgba(255, 255, 255, 0.07);
-      backdrop-filter: blur(25px);
-      -webkit-backdrop-filter: blur(25px);
-      border: 1px solid rgba(255, 255, 255, 0.25);
-      border-radius: 32px;
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 28px;
       padding: 35px 25px;
-      max-width: 440px;
+      max-width: 420px;
       width: 100%;
       text-align: center;
-      box-shadow: 0 30px 60px rgba(0, 0, 0, 0.7), inset 0 0 15px rgba(255, 255, 255, 0.1);
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
       position: relative;
       z-index: 10;
     }
 
     .badge {
       display: inline-block;
-      background: linear-gradient(135deg, #ff007f, #ff4d6d);
-      color: white;
-      padding: 8px 20px;
-      border-radius: 25px;
-      font-size: 0.88rem;
-      font-weight: 800;
-      letter-spacing: 1px;
-      box-shadow: 0 5px 20px rgba(255, 0, 127, 0.5);
-      margin-bottom: 18px;
-      text-transform: uppercase;
+      background: rgba(255, 77, 109, 0.15);
+      color: #ff758f;
+      border: 1px solid rgba(255, 77, 109, 0.3);
+      padding: 6px 16px;
+      border-radius: 20px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      margin-bottom: 20px;
     }
 
     h1 {
-      font-size: 2.5rem;
-      font-weight: 900;
-      background: linear-gradient(135deg, #ffffff 30%, #ff85a1 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      margin-bottom: 6px;
-      text-shadow: 0 0 20px rgba(255, 133, 161, 0.3);
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: #ffffff;
+      margin-bottom: 8px;
     }
 
     .subtitle {
-      color: #c8b6ff;
-      font-size: 1rem;
-      font-weight: 500;
+      color: #a29bfe;
+      font-size: 0.95rem;
       margin-bottom: 25px;
     }
 
+    /* Sade Rota Kutusu */
     .route-box {
-      background: rgba(0, 0, 0, 0.35);
-      border-radius: 20px;
-      padding: 16px;
+      background: rgba(0, 0, 0, 0.25);
+      border-radius: 16px;
+      padding: 14px;
       margin-bottom: 20px;
-      border: 1px solid rgba(255, 255, 255, 0.12);
+      border: 1px solid rgba(255, 255, 255, 0.08);
       display: flex;
       justify-content: space-around;
       align-items: center;
-    }
-
-    .city {
-      font-weight: 800;
-      font-size: 1.1rem;
-      color: #e2e8f0;
-    }
-
-    .target-card {
-      background: linear-gradient(135deg, rgba(255, 0, 127, 0.25), rgba(114, 9, 183, 0.25));
-      border: 1px dashed #ff4d6d;
-      border-radius: 20px;
-      padding: 16px;
-      margin-bottom: 22px;
-    }
-
-    .target-card h3 {
-      color: #ff758f;
-      font-size: 1.1rem;
-      margin-bottom: 5px;
-    }
-
-    .target-card p {
-      font-size: 0.9rem;
-      color: #e2d9f3;
+      font-size: 1rem;
+      font-weight: 600;
     }
 
     .quote-card {
-      background: rgba(255, 255, 255, 0.06);
-      border-left: 4px solid #ff007f;
-      padding: 18px;
-      border-radius: 14px;
+      background: rgba(255, 255, 255, 0.03);
+      border-left: 3px solid #ff4d6d;
+      padding: 16px;
+      border-radius: 12px;
       font-style: italic;
-      font-size: 1.05rem;
-      line-height: 1.5;
-      color: #ffffff;
+      font-size: 0.95rem;
+      line-height: 1.6;
+      color: #e2e8f0;
       margin-bottom: 25px;
       text-align: left;
-      box-shadow: inset 0 0 10px rgba(0,0,0,0.2);
     }
 
     .btn-main {
-      background: linear-gradient(135deg, #ff007f 0%, #ff4d6d 100%);
+      background: linear-gradient(135deg, #ff4d6d, #c77dff);
       color: white;
       border: none;
-      padding: 18px 30px;
-      font-size: 1.1rem;
-      font-weight: 800;
+      padding: 16px 28px;
+      font-size: 1rem;
+      font-weight: 700;
       border-radius: 50px;
       cursor: pointer;
       width: 100%;
-      box-shadow: 0 12px 30px rgba(255, 0, 127, 0.6);
+      box-shadow: 0 10px 25px rgba(255, 77, 109, 0.4);
       transition: all 0.2s ease;
-    }
-
-    .btn-main:hover {
-      transform: scale(1.03);
-      box-shadow: 0 15px 35px rgba(255, 0, 127, 0.8);
     }
 
     .btn-main:active {
@@ -159,10 +126,10 @@
     }
 
     .love-note {
-      min-height: 50px;
+      min-height: 45px;
       margin-top: 18px;
-      font-size: 1.1rem;
-      font-weight: 700;
+      font-size: 1.05rem;
+      font-weight: 600;
       color: #ff758f;
       display: flex;
       align-items: center;
@@ -172,74 +139,69 @@
     .music-box {
       margin-top: 25px;
       padding-top: 18px;
-      border-top: 1px solid rgba(255, 255, 255, 0.15);
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
     }
 
     .music-box p {
-      font-size: 0.85rem;
-      color: #b3a8d4;
+      font-size: 0.82rem;
+      color: #a29bfe;
       margin-bottom: 10px;
     }
 
     audio {
       width: 100%;
-      height: 40px;
+      height: 36px;
       border-radius: 20px;
     }
   </style>
 </head>
 <body>
 
-  <!-- Yüzen Kalpler (JavaScript İle Çoğalır) -->
+  <!-- Arka Planda Akıcı Yüzen Kalpler -->
   <div id="heartsContainer"></div>
 
   <div class="card">
-    <span class="badge">❤️ 2. HAFTAMIZ KUTLU OLSUN ❤️</span>
+    <span class="badge">❤️ 2. Haftamız Kutlu Olsun</span>
     <h1>Güzelim Hümeyram</h1>
-    <p class="subtitle">Senin için hazırladığım özel dünyamıza hoş geldin ✨</p>
+    <p class="subtitle">Senin için hazırladığım küçük dünyamıza hoş geldin ✨</p>
 
     <div class="route-box">
-      <span class="city">📍 Batman</span>
-      <span style="color: #ff007f; font-size: 1.3rem;">✈️💖✈️</span>
-      <span class="city">📍 Bursa</span>
-    </div>
-
-    <div class="target-card">
-      <h3>📍 Kavuşma Noktamız: Bursa</h3>
-      <p>Mesafeler ne kadar uzak olursa olsun, kalbimin attığı tek yer sensin...</p>
+      <span>📍 Batman</span>
+      <span style="color: #ff4d6d;">✈️ 💖 ✈️</span>
+      <span>📍 Bursa</span>
     </div>
 
     <div class="quote-card">
-      "Madem seni çok istiyorlardı, öylece ortaya koymasalardı... Aldım bir kere, geri vermem! Aşığım, mutluyum..." 🥰
+      "Madem seni çok istiyorlardı, öylece ortaya koymasalardı... Aldım bir kere, geri vermeyeceğim! Aşığım, mutluyum..." 🥰
     </div>
 
-    <button class="btn-main" onclick="patlat()">Bana Tıkla & Kalpleri Patlat ✨</button>
+    <button class="btn-main" onclick="patlat()">Dokun & Kalpleri Patlat ✨</button>
 
-    <div class="love-note" id="note">Sürpriz mesajını görmek için butona tıkla!</div>
+    <div class="love-note" id="note">Özel mesajın için butona tıkla!</div>
 
     <div class="music-box">
-      <p>🎵 İkimizin Romantik Fon Müziği (Dinlemek İçin Başlat)</p>
-      <!-- İnternet Üzerinden Kesintisiz Çalışan Canlı Müzik -->
+      <p>🎵 Dolu Kadehi Ters Tut - Madem (Nakarattan Başlar)</p>
+      <!-- Tam Nakarat Kısmı (Madem Seni Çok İstiyorlardı) -->
       <audio id="myAudio" controls loop preload="auto">
-        <source src="https://cdn.pixabay.com/download/audio/2022/05/27/audio_1808fbf07a.mp3?filename=romantic-piano-112188.mp3" type="audio/mpeg">
+        <source src="https://cdns-preview-d.dzcdn.net/stream/c-d261e4dd9ffeb9018ca1eb85a5369680-2.mp3" type="audio/mpeg">
       </audio>
     </div>
   </div>
 
   <script>
-    // Arka planda uçuşan kalpleri oluşturan fonksiyon
+    // Arka Planda Yüzen Zarif Kalpler
     function createBgHearts() {
       const container = document.getElementById('heartsContainer');
-      const heartSymbols = ['❤️', '💖', '💕', '💗', '✨'];
+      const heartSymbols = ['❤️', '💖', '✨', '💕'];
       
-      for(let i = 0; i < 25; i++) {
+      for(let i = 0; i < 20; i++) {
         const heart = document.createElement('div');
         heart.className = 'bg-heart';
         heart.innerText = heartSymbols[Math.floor(Math.random() * heartSymbols.length)];
         heart.style.left = Math.random() * 100 + 'vw';
-        heart.style.animationDuration = (Math.random() * 3 + 4) + 's';
-        heart.style.animationDelay = (Math.random() * 5) + 's';
-        heart.style.fontSize = (Math.random() * 15 + 15) + 'px';
+        heart.style.animationDuration = (Math.random() * 3 + 5) + 's';
+        heart.style.animationDelay = (Math.random() * 4) + 's';
+        heart.style.fontSize = (Math.random() * 12 + 14) + 'px';
         container.appendChild(heart);
       }
     }
@@ -249,13 +211,12 @@
       "İyi ki hayatımdasın Güzelim Hümeyram! ✨",
       "Bursa'da gözlerinin içine bakacağım günü sabırsızlıkla bekliyorum! ❤️",
       "Uzaklıklar sadece sarılacağımız anı daha özel kılar...",
-      "Aldım seni bir kere, asla geri vermem! 🥰",
-      "Gülüşün bu dünyadaki en güzel manzara!",
-      "Sen benim başıma gelen en güzel şeyisiniz Hümeyram 💕"
+      "Aldım seni bir kere, asla geri vermeyeceğim! 🥰",
+      "Gülüşün dünyanın en güzel manzarası Hümeyram 💕"
     ];
 
     function patlat() {
-      // Şarkıyı otomatik başlat (Tarayıcı engeline takılmamak için butonla tetiklenir)
+      // Şarkıyı otomatik başlat
       const audio = document.getElementById('myAudio');
       if (audio.paused) {
         audio.play();
@@ -263,10 +224,10 @@
 
       // Kalp konfetisi
       confetti({
-        particleCount: 100,
-        spread: 90,
+        particleCount: 80,
+        spread: 70,
         origin: { y: 0.6 },
-        colors: ['#ff007f', '#ff4d6d', '#ffffff', '#c8b6ff']
+        colors: ['#ff4d6d', '#c77dff', '#ffffff']
       });
 
       const rastgele = mesajlar[Math.floor(Math.random() * mesajlar.length)];
@@ -275,3 +236,4 @@
   </script>
 </body>
 </html>
+
