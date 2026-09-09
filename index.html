@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hümeyra'm ❤️</title>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Segoe UI', Roboto, sans-serif;
+      background: radial-gradient(circle at center, #2d124d 0%, #0f0826 100%);
+      color: #fff;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      overflow-x: hidden;
+    }
+    .card {
+      background: rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 28px;
+      padding: 32px 24px;
+      max-width: 440px;
+      width: 100%;
+      text-align: center;
+      box-shadow: 0 25px 50px rgba(0, 0, 0, 0.6);
+      position: relative;
+    }
+    .badge {
+      display: inline-block;
+      background: linear-gradient(135deg, #ff4b2b, #ff416c);
+      color: white;
+      padding: 6px 18px;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      box-shadow: 0 4px 15px rgba(255, 65, 108, 0.4);
+      margin-bottom: 15px;
+    }
+    h1 {
+      font-size: 2.4rem;
+      font-weight: 800;
+      background: linear-gradient(135deg, #ffffff, #ffb3c6);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 8px;
+    }
+    .sub-title {
+      color: #b3a8d4;
+      font-size: 0.95rem;
+      margin-bottom: 25px;
+    }
+    .route-container {
+      background: rgba(0, 0, 0, 0.3);
+      border-radius: 18px;
+      padding: 16px;
+      margin-bottom: 20px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .cities {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: 700;
+      font-size: 1rem;
+    }
+    .city-badge {
+      background: rgba(255, 255, 255, 0.12);
+      padding: 8px 14px;
+      border-radius: 12px;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+    }
+    .target-box {
+      background: linear-gradient(135deg, rgba(255, 65, 108, 0.2), rgba(123, 44, 191, 0.2));
+      border: 1px dashed #ff416c;
+      border-radius: 16px;
+      padding: 14px;
+      margin-bottom: 22px;
+    }
+    .target-box h3 {
+      color: #ff758f;
+      font-size: 1.05rem;
+      margin-bottom: 4px;
+    }
+    .target-box p {
+      font-size: 0.88rem;
+      color: #e2d9f3;
+    }
+    .quote-card {
+      background: rgba(255, 255, 255, 0.05);
+      border-left: 4px solid #ff416c;
+      padding: 16px;
+      border-radius: 12px;
+      font-style: italic;
+      font-size: 1rem;
+      line-height: 1.5;
+      color: #fff;
+      margin-bottom: 25px;
+      text-align: left;
+    }
+    .btn-main {
+      background: linear-gradient(135deg, #ff416c, #ff4b2b);
+      color: white;
+      border: none;
+      padding: 16px 28px;
+      font-size: 1.05rem;
+      font-weight: 700;
+      border-radius: 50px;
+      cursor: pointer;
+      width: 100%;
+      box-shadow: 0 10px 25px rgba(255, 65, 108, 0.5);
+      transition: transform 0.2s;
+    }
+    .btn-main:active {
+      transform: scale(0.97);
+    }
+    .love-note {
+      min-height: 45px;
+      margin-top: 15px;
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #ff758f;
+    }
+    .music-box {
+      margin-top: 25px;
+      padding-top: 18px;
+      border-top: 1px solid rgba(255, 255, 255, 0.12);
+    }
+    .music-title {
+      font-size: 0.85rem;
+      color: #a29bfe;
+      margin-bottom: 10px;
+    }
+    audio {
+      width: 100%;
+      height: 38px;
+      border-radius: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <span class="badge">2. Haftamız Kutlu Olsun ❤️</span>
+    <h1>Hümeyra</h1>
+    <p class="sub-title">Senin için hazırladığım küçük sürpriz...</p>
+
+    <div class="route-container">
+      <div class="cities">
+        <span class="city-badge">📍 Batman</span>
+        <span style="color: #ff416c;">✈️ ✈️</span>
+        <span class="city-badge">📍 Bursa</span>
+      </div>
+    </div>
+
+    <div class="target-box">
+      <h3>📍 Gelecek Yıl Buluşma Noktamız: Bursa</h3>
+      <p>Aramızdaki kilometreler bitecek, göz göze geleceğimiz o anı sabırsızlıkla bekliyorum...</p>
+    </div>
+
+    <div class="quote-card">
+      "Madem seni çok istiyorlardı, öylece ortaya koymasalardı... Aldım bir kere, geri vermem! Aşığım, mutluyum..." 🥰
+    </div>
+
+    <button class="btn-main" onclick="patlat()">Bana Tıkla & Kalpleri Patlat ✨</button>
+
+    <div class="love-note" id="note"></div>
+
+    <div class="music-box">
+      <p class="music-title">🎵 İkimizin Şarkısı (Dinlemek İçin Oynat)</p>
+      <audio controls loop>
+        <source src="sarki.mp3" type="audio/mpeg">
+        Tarayıcınız ses öğesini desteklemiyor.
+      </audio>
+    </div>
+  </div>
+
+  <script>
+    const mesajlar = [
+      "İyi ki hayatımdasın Hümeyra! ✨",
+      "Bursa'da gözlerinin içine bakacağım günü sabırsızlıkla bekliyorum! ❤️",
+      "Uzaklıklar sadece sarılacağımız anı daha özel kılar...",
+      "Aldım seni bir kere, asla geri vermem! 🥰",
+      "Gülüşün dünyanın en güzel manzarası!"
+    ];
+
+    function patlat() {
+      confetti({
+        particleCount: 90,
+        spread: 80,
+        origin: { y: 0.6 },
+        colors: ['#ff416c', '#ff4b2b', '#ffffff', '#a29bfe']
+      });
+
+      const rastgele = mesajlar[Math.floor(Math.random() * mesajlar.length)];
+      document.getElementById('note').innerText = rastgele;
+    }
+  </script>
+</body>
+</html>
